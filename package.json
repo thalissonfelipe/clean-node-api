@@ -13,5 +13,8 @@
   },
   "scripts": {
     "test": "jest"
+  },
+  "standard": {
+    "env": ["jest"]
   }
 }
