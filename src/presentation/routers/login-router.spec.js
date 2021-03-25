@@ -12,7 +12,9 @@ const makeAuthUseCase = () => {
       return this.accessToken
     }
   }
-  return new AuthUseCaseSpy()
+  const authUseCaseSpy = new AuthUseCaseSpy()
+  authUseCaseSpy.accessToken = 'valid_token'
+  return authUseCaseSpy
 }
 
 const makeAuthUseCaseWithError = () => {
@@ -37,7 +39,6 @@ const makeEmailValidatorSpy = () => {
 
 const makeSut = () => {
   const authUseCaseSpy = makeAuthUseCase()
-  authUseCaseSpy.accessToken = 'valid_token'
   const emailValidatorSpy = makeEmailValidatorSpy()
   const sut = new LoginRouter(authUseCaseSpy, emailValidatorSpy)
   return {
