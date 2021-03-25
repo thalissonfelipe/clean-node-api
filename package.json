@@ -2,17 +2,6 @@
   "name": "clean-node",
   "version": "1.0.0",
   "main": "index.js",
-  "lint-staged": {
-    "*.js": [
-      "standard --fix",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "repository": "https://github.com/thalissonfelipe/clean-node-api.git",
   "author": "Thalisson Felipe <thalissonlipe7@gmail.com>",
   "license": "MIT",
