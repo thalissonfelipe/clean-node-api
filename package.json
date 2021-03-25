@@ -12,7 +12,8 @@
     "standard": "^16.0.3"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll",
+    "test:staged": "jest"
   },
   "standard": {
     "env": ["jest"]
